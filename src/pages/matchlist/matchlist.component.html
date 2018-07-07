@@ -1,0 +1,33 @@
+<div class="matchlist-box">
+  <div class="match-tabs">
+    <div [ngClass]="{'my-select':tab === 1 , 'my-default' : tab !== 1 }" (click)="onTab(1)"></div>
+    <div [ngClass]="{'other-select':tab === 2 , 'other-default' : tab !== 2 }" (click)="onTab(2)"></div>
+  </div>
+
+
+
+
+  <div class="matchlist-list-box">
+    <div class="date-list" *ngFor="let item of userList">
+      <p>{{item.date}}</p>
+      <ul>
+        <li class="user-item"  *ngFor="let user of item.list" (click)="onItem(user)">
+          <div class="matchlist-left">
+            <img [src]="user.icon">
+            <p>{{user.name}}</p>
+          </div>
+
+          <div  class="matchlist-right">
+            <img *ngIf="user.status[0]" src="./assets/images/status_0.png"/>
+            <img *ngIf="user.status[1]" src="./assets/images/status_1.png"/>
+            <img *ngIf="user.status[2]" src="./assets/images/status_2.png"/>
+            <img *ngIf="user.status[3]" src="./assets/images/status_3.png"/>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="more" (click)="onMore()">——点击加载更多——</div>
+</div>
+

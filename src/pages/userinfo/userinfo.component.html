@@ -1,0 +1,39 @@
+<div class="user-box">
+  <!--<img class="home-bg" src="./assets/images/userinfo_bg.jpg"/>-->
+
+  <div>
+    <div class="user-center">
+      <div class="icon-box">
+        <img [src]="user.icon">
+        <p>{{user.name}}</p>
+      </div>
+
+      <div class="user-line">
+        <img src="./assets/images/icon_sex.png"/>
+        <div>
+          <span [ngClass]="{'icon-select':user.sex === 0}" (click)="onChange(0,0)">男</span>
+          <span [ngClass]="{'icon-select':user.sex === 1}"  (click)="onChange(0,1)">女</span>
+        </div>
+      </div>
+
+      <div class="user-line">
+        <img src="./assets/images/icon_data.png"/>
+        <div>
+          <span [ngClass]="{'icon-select':user.birthdayType === 0}" (click)="onChange(1,0)">公历</span>
+          <span [ngClass]="{'icon-select':user.birthdayType === 1}"  (click)="onChange(1,1)">农历</span>
+        </div>
+      </div>
+
+      <div class="date-box">
+        <p>日期：<input type="text" class="input-date" id="pickdate" /></p>
+        <p>时间：<input type="text" class="input-date" id="picktime" /></p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <img class="btn-bottom" src="./assets/images/btn_link.png" (click)="onNext()">
+</div>

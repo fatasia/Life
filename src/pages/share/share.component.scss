@@ -1,0 +1,20 @@
+@import "./../userinfo/userinfo.component";
+.share-bg{
+  width: 100%;
+
+}
+
+.share-box{
+  position: fixed;
+  left: 0px;
+  text-align: center;
+  right: 0px;
+  width: 100%;
+  bottom: 50px;
+}
+
+.btn-share {
+  @extend .btn-bottom;
+  margin-top: 50px;
+  width: 30%;
+}
