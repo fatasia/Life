@@ -1,3 +1,48 @@
-<p>
-  match works!
-</p>
+<div class="match-box">
+
+  <div class="icon-box" style="margin-top: 15%;">
+    <img [src]="user.icon">
+    <p>{{user.name}}</p>
+  </div>
+
+
+  <div class="match-status-box l1">
+    <img src="./assets/images/gui_0.png">
+    <div class="match-center">
+      他是您的贵人，多与他沟通可能会有惊喜哦！
+    </div>
+  </div>
+
+  <div class="match-status-box l2">
+    <img src="./assets/images/ni_0.png">
+    <div class="match-center">
+      他听你的，会持续帮助你哦。
+    </div>
+  </div>
+
+  <div class="match-status-box r1">
+    <img src="./assets/images/he_0.png">
+    <div class="match-center">
+      六合贵人也是贵人中的一种，能量场全方位加持。
+
+    </div>
+  </div>
+
+  <div class="match-status-box r2">
+    <img src="./assets/images/ren_0.png">
+    <div class="match-center">
+      战友情谊，不抛弃不放弃的情谊。
+    </div>
+  </div>
+
+
+  <div class="match-bottom">
+      <div class="match-max">
+        <div class="match-current" [ngStyle]="{'width':user.match+'%'}"></div>
+      </div>
+     <img src="./assets/images/btn_match.png">
+
+    <p>匹配时间：{{user.date}}</p>
+  </div>
+
+</div>
