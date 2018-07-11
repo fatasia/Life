@@ -26,7 +26,8 @@ import { UserinfoComponent } from '../pages/userinfo/userinfo.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { ShareComponent } from '../pages/share/share.component';
 import { MatchlistComponent } from '../pages/matchlist/matchlist.component';
-import { MatchComponent } from '../pages/match/match.component';
+import {MatchtoComponent} from '../pages/matchto/matchto.component';
+import {MatchComponent} from '../pages/match/match.component';
 
 
 /** 通过类引用方式解析国家化文件 */
@@ -59,6 +60,7 @@ export function TranslateLoaderFactory() {
     UserinfoComponent,
     ShareComponent,
     MatchlistComponent,
+    MatchtoComponent ,
     MatchComponent,
     HomeComponent
   ],

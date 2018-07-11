@@ -8,6 +8,7 @@ import {HomeComponent} from '../pages/home/home.component';
 import {ShareComponent} from '../pages/share/share.component';
 import {MatchlistComponent} from '../pages/matchlist/matchlist.component';
 import {MatchComponent} from '../pages/match/match.component';
+import {MatchtoComponent} from '../pages/matchto/matchto.component';
 
 
 /** 路由配置*/
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'user/:id', component: UserinfoComponent}, // 用户信息
   {path: 'share/:id', component: ShareComponent}, // 用户分享
   {path: 'matchlist', component: MatchlistComponent}, // 匹配列表
+  {path: 'matchto/:id', component: MatchtoComponent}, // 与人匹配页面
   {path: 'match/:id', component: MatchComponent}, // 匹配详情
 
 
