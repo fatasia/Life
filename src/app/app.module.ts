@@ -16,6 +16,7 @@ import {RouterUtil} from '../providers/RouterUtil';
 import {Logger} from '../providers/Logger';
 import {LocalStorage} from '../providers/Localstorage';
 import {Utils} from '../providers/Utils';
+import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 
 /**pages*/
 import { AppComponent } from './app.component';
@@ -83,8 +84,10 @@ export function TranslateLoaderFactory() {
     LocalStorage,
     Logger,
     HeaderComponent,
-    Utils
-  ],
+    Utils,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
